@@ -1,0 +1,3 @@
+DROP TABLE IF EXISTS "user";
+
+DROP SEQUENCE IF EXISTS user_seq;
