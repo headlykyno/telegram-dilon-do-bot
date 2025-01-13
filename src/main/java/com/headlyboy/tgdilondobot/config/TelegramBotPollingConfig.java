@@ -1,4 +1,4 @@
-package com.headlyboy.tgpenisbot.config;
+package com.headlyboy.tgdilondobot.config;
 
 import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
@@ -16,13 +16,13 @@ import org.telegram.telegrambots.meta.exceptions.TelegramApiException;
 @RequiredArgsConstructor
 public class TelegramBotPollingConfig {
 
-    private final LongPollingSingleThreadUpdateConsumer tgPenisBot;
+    private final LongPollingSingleThreadUpdateConsumer tgDilondoBot;
     private final TelegramClientConfig telegramClientConfig;
 
     @Bean
     public TelegramBotsLongPollingApplication telegramBotsLongPollingApplication() throws TelegramApiException {
         TelegramBotsLongPollingApplication tgBotApplication = new TelegramBotsLongPollingApplication();
-        tgBotApplication.registerBot(telegramClientConfig.getApiKey(), tgPenisBot);
+        tgBotApplication.registerBot(telegramClientConfig.getApiKey(), tgDilondoBot);
         log.info("Telegram bots application started");
         return tgBotApplication;
     }

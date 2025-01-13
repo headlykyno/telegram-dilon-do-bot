@@ -9,10 +9,10 @@
         <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>com.headlyboy</groupId>
-    <artifactId>tgpenisbot</artifactId>
+    <artifactId>dilondobot</artifactId>
     <version>0.0.1-SNAPSHOT</version>
-    <name>tgpenisbot</name>
-    <description>tgpenisbot</description>
+    <name>tgdilondobot</name>
+    <description>tgdilondobot</description>
     <url/>
     <licenses>
         <license/>
@@ -58,6 +58,18 @@
             <artifactId>lombok</artifactId>
             <version>1.18.24</version>
             <scope>provided</scope>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jooq</groupId>
+            <artifactId>jooq-meta</artifactId>
+            <version>3.19.17</version>
+        </dependency>
+
+        <dependency>
+            <groupId>org.jooq</groupId>
+            <artifactId>jooq-codegen</artifactId>
+            <version>3.19.17</version>
         </dependency>
     </dependencies>
 
