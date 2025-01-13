@@ -1,4 +1,4 @@
-package com.headlyboy.tgpenisbot.config;
+package com.headlyboy.tgdilondobot.config;
 
 import lombok.Getter;
 import org.springframework.beans.factory.annotation.Value;
