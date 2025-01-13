@@ -1,5 +1,7 @@
 package com.headlyboy.tgdilondobot.service.impl;
 
+import com.headlyboy.tgdilondobot.dao.api.ChatDao;
+import com.headlyboy.tgdilondobot.dao.api.UserDao;
 import com.headlyboy.tgdilondobot.dto.MessageResponseDto;
 import com.headlyboy.tgdilondobot.service.api.CommandService;
 import lombok.RequiredArgsConstructor;
@@ -16,12 +18,15 @@ import java.util.Random;
 public class CommandServiceImpl implements CommandService {
 
     private final TelegramClient telegramClient;
+    private final UserDao userDAO;
+    private final ChatDao chatDAO;
 
     @Override
     public MessageResponseDto processDick(Update update) {
 
+        Long chatId = update.getMessage().getChatId();
         SendMessage sendMessage = SendMessage.builder()
-                .chatId(update.getMessage().getChatId())
+                .chatId(chatId)
                 .text(update.getMessage().getText())
                 .replyToMessageId(update.getMessage().getMessageId())
                 .build();

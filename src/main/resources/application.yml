@@ -1,4 +1,16 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/dilondo
+    username: postgres
+    password: postgres
+  jooq:
+    sql-dialect: postgres
 telegram:
   bot:
     api:
       key: '8081752873:AAH84N0M95fdoEeEdkwB0EgTkOjYfYoQpfE'
+logging:
+  level:
+    org:
+      jooq: DEBUG
+      jooq.impl.DefaultExecuteContext.logVersionSupport: ERROR
