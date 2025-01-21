@@ -1,5 +1,6 @@
 package com.headlyboy.tgdilondobot.polling;
 
+import com.headlyboy.tgdilondobot.enums.ChatTypeEnum;
 import com.headlyboy.tgdilondobot.enums.CommandEnum;
 import com.headlyboy.tgdilondobot.service.api.CommandService;
 import lombok.RequiredArgsConstructor;
@@ -18,8 +19,10 @@ public class TgdilondoBot implements LongPollingSingleThreadUpdateConsumer {
 
     @Override
     public void consume(Update update) {
-        if (update.hasMessage() && update.getMessage().hasText()) {
-
+        String type = update.getMessage().getChat().getType();
+        boolean updateHasText = update.hasMessage() && update.getMessage().hasText();
+        boolean chatIsGroup = ChatTypeEnum.GROUP.name().toLowerCase().equals(type);
+        if (updateHasText && chatIsGroup) {
             CommandEnum command = Optional.ofNullable(update.getMessage())
                     .map(Message::getText)
                     .map(String::trim)
@@ -28,7 +31,6 @@ public class TgdilondoBot implements LongPollingSingleThreadUpdateConsumer {
 
             switch (command) {
                 case DICK -> commandService.processDick(update);
-                case UNKNOWN -> commandService.processUnknown(update);
             }
         }
     }

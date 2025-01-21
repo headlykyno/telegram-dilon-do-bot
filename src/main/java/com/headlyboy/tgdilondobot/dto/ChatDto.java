@@ -7,5 +7,9 @@ import lombok.Getter;
 @Getter
 @Builder
 @AllArgsConstructor
-public class MessageResponseDto {
+public class ChatDto {
+
+    private final Long id;
+
+    private final String name;
 }

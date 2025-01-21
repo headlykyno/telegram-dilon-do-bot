@@ -1,11 +1,12 @@
 package com.headlyboy.tgdilondobot.service.api;
 
-import com.headlyboy.tgdilondobot.dto.MessageResponseDto;
+import com.headlyboy.tgdilondobot.dto.ChatDto;
+import org.springframework.transaction.annotation.Transactional;
 import org.telegram.telegrambots.meta.api.objects.Update;
 
 public interface CommandService {
 
-    MessageResponseDto processDick(Update update);
+    @Transactional
+    ChatDto processDick(Update update);
 
-    MessageResponseDto processUnknown(Update update);
 }
