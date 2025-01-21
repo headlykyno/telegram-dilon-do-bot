@@ -7,7 +7,7 @@ import lombok.Getter;
 @Getter
 @Builder
 @AllArgsConstructor
-public class MessageUserDto {
+public class UserDto {
 
     private final Long id;
 

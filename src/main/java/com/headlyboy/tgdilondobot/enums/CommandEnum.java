@@ -1,6 +1,7 @@
 package com.headlyboy.tgdilondobot.enums;
 
 import lombok.RequiredArgsConstructor;
+import org.jetbrains.annotations.NotNull;
 
 @RequiredArgsConstructor
 public enum CommandEnum {
@@ -10,9 +11,9 @@ public enum CommandEnum {
 
     private final String command;
 
-    public static CommandEnum parseAndGet(String command) {
+    public static CommandEnum parseAndGet(@NotNull String command) {
         for (CommandEnum commandEnum : CommandEnum.values()) {
-            if (commandEnum.command.equals(command)) {
+            if (command.startsWith(commandEnum.command)) {
                 return commandEnum;
             }
         }
