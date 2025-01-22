@@ -1,4 +1,4 @@
-package com.headlyboy.tgdilondobot.dao.api;
+package com.headlyboy.tgdilondobot.repository.api;
 
 import com.headlyboy.tgdilondobot.dto.UserDto;
 import lombok.NonNull;

@@ -9,6 +9,14 @@ telegram:
   bot:
     api:
       key: '8081752873:AAH84N0M95fdoEeEdkwB0EgTkOjYfYoQpfE'
+length:
+  plus:
+    start: 1
+    end: 10
+    percent: 50
+  minus:
+    start: 1
+    end: 10
 logging:
   level:
     org:
