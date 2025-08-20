@@ -1,4 +1,11 @@
 spring:
+  liquibase:
+    enabled: true
+    change-log: classpath:db/master.xml
+    default-schema: public
+    url: ${spring.datasource.url}
+    user: ${spring.datasource.username}
+    password: ${spring.datasource.password}
   datasource:
     url: jdbc:postgresql://localhost:5432/dilondo
     username: postgres
@@ -8,7 +15,7 @@ spring:
 telegram:
   bot:
     api:
-      key: '8081752873:AAH84N0M95fdoEeEdkwB0EgTkOjYfYoQpfE'
+      key: ''
 length:
   plus:
     start: 1
@@ -16,7 +23,8 @@ length:
     percent: 50
   minus:
     start: 1
-    end: 10
+    end: 5
+cooldown: 0
 logging:
   level:
     org:
