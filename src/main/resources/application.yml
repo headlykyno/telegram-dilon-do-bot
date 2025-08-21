@@ -22,3 +22,5 @@ logging:
     org:
       jooq: DEBUG
       jooq.impl.DefaultExecuteContext.logVersionSupport: ERROR
+
+kekw
