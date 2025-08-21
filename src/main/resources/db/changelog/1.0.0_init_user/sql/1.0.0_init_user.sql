@@ -1,5 +1,0 @@
-CREATE TABLE IF NOT EXISTS "user"
-(
-    user_id  BIGINT PRIMARY KEY NOT NULL,
-    username VARCHAR(64)        NOT NULL
-);
